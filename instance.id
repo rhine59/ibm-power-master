@@ -1,4 +1,0 @@
-Retrieving instances with type service_instance in all resource groups in all locations under account Richard Hine's Account as Richard.Hine@uk.ibm.com...
-OK
-ID                                                                                                                   GUID                                   Name                              Location   State    Type               Resource ID   
-crn:v1:bluemix:public:power-iaas:eu-de-1:a/fd6118dd8088f67726c522e96131c343:1d80f3d0-1854-4dd2-afcd-e42c0cda43f7::   1d80f3d0-1854-4dd2-afcd-e42c0cda43f7   Power Systems Virtual Server-yj   eu-de-1    active   service_instance   abd259f0-9990-11e8-acc8-b9f54a8f1661   

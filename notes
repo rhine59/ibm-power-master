@@ -1,0 +1,106 @@
+
+
+Richard Hine:speech_balloon:  5:45 PM
+Hello Radu, would appreciate some help please with this IBM-Cloud-Provider issue. I have put the diagnostics in Slack and have added a meeting invite with all the details again including access to the OCP cluster jumpbox machine. I know you are 8 hours or so behind us, so can you maybe call me today and help me sort this out. The TF is fine standalone, but under CAM - I have the problems. Phone number is +44 7734 325 154 or Slack as you prefer. Thanks
+
+Radu Mateescu  5:49 PM
+hi guys
+5:50
+which version of the IBM terraform provider are you using ? the one that comes with CAM, (0.9 I believe), or the latest from IBMs site (1.2) ?
+
+Richard Hine:speech_balloon:  5:54 PM
+Hey Radu, I built one afresh with go version go1.13.8 linux/amd64  and Terraform v0.12.21 and then dropped it into the container. seee …
+5:54
+Untitled 
+-r-xr-xr-x. 1 terraform terraform  36781294 Feb 19 09:31 terraform-provisioner-icp-elk_v0.2.3
+-r-xr-xr-x. 1 terraform terraform  36796830 Feb 19 09:31 terraform-provisioner-ucd_v0.5.0
+-r-xr-xr-x. 1 terraform terraform  60534164 Feb 24 15:54 terraform-provider-ibm_v0.19.0_v0.12.21
+drwxrwxrwx. 2 terraform terraform      4096 Feb 24 17:08 linux_amd64
+sh-4.4$ pwd
+Click to expand inline (7 lines)
+
+
+
+5:54
+I am not an expert doing this stuff. Have I messed up?
+
+Radu Mateescu  5:55 PM
+let me take a look, I saw your note just now
+
+Richard Hine:speech_balloon:  5:55 PM
+OK. Many thanks
+5:56
+You can get onto the cluster jumpbox using the instructions I attached to the calendar invite - SSH keys etc.
+
+Radu Mateescu  6:06 PM
+ok, looks a bit better now
+6:07
+image.png 
+image.png
+
+
+6:07
+passed the initialization part though
+6:08
+this is what I had to do : since you’re not having a camvariables.json file, CAM will use the default engine, which is still 11. I had therefore to go and change that to 12 in CAM UI
+6:08
+the second thing, I had to rename the provider on the PV like this mv terraform-provider-ibm_v0.19.0_v0.12.21 terraform-provider-ibm_v0.19.0_x4
+6:08
+terraform is rather picky on naming
+
+Richard Hine:speech_balloon:  6:10 PM
+so given that I am trying to ‘import’ into CAM. Should I create a camvariables.json file? - Yes, I went 11, 12 then back to 11.
+6:10
+Great! It’s been a long week already.
+
+Radu Mateescu  6:10 PM
+this is a sample json for 12 :
+6:10
+https://github.com/IBM-CAMHub-Open/template_openshift_installer/tree/4.2/terraform12
+6:10
+this line in particular: https://github.com/IBM-CAMHub-Open/template_openshift_installer/blob/4.2/terraform12/vmware/terraform/camvariables.json#L2
+6:11
+if you provide this line, CAM will use it instead of its default version
+6:12
+so I would revert the default to 11 , like it was initially and provide a camvariables.json which will define version 12
+6:12
+this way you won’t be broken if you’re trying to deploy legacy (v11) templates
+
+Richard Hine:speech_balloon:  6:12 PM
+OK, get it. My homebrew provider should stay then?
+
+Radu Mateescu  6:13 PM
+I think that should probably be good. Assuming you compiled it on the  same platform
+
+Richard Hine:speech_balloon:  6:13 PM
+provider naming conventions - is there some doc I should be following?
+
+Radu Mateescu  6:14 PM
+found this for 12: https://www.terraform.io/docs/configuration/providers.html#plugin-names-and-versions
+Terraform by HashiCorpTerraform by HashiCorp
+Providers - Configuration Language - Terraform by HashiCorp
+Providers are responsible in Terraform for managing the lifecycle of a resource: create, read, update, delete.
+
+Richard Hine:speech_balloon:  6:14 PM
+compiled with go version go1.13.8 linux/amd64  and Terraform v0.12.21 . I am not a programmer or developer - should this be enough?
+6:15
+Docs - thanks
+
+Radu Mateescu  6:16 PM
+yes, as long as you compiled it on the same platform (i.e. if you’re compiling on darwin and use linux for CAM, it won’t work). I’ve learned this the hard way sadly
+
+Richard Hine:speech_balloon:  6:17 PM
+Ha - linux 64bit all the way through. 1 last Q please. So I now have a non standard CAM pod, so how do I best persist this change over pod upgrades, restarts? Any suggestions?
+
+Radu Mateescu  6:18 PM
+you should be fine, providers binaries are stored on shared storage. They will survive a pod crash
+6:19
+/home/terraform on the tf pod is the mount point for the terraform PV
+
+Richard Hine:speech_balloon:  6:20 PM
+Ah - of course - Many thanks for your time, you have saved the day.
+new messages
+
+Radu Mateescu  6:20 PM
+yw, any time
+

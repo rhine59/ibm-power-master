@@ -6,5 +6,5 @@
 #export IAAS_CLASSIC_USERNAME=Richard.Hine@uk.ibm.com
 export TF_LOG=INFO
 #export IC_REGION=eu-de
-terraform plan
+terraform apply
 
