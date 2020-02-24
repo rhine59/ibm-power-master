@@ -24,15 +24,16 @@ variable "imagename" {
 }
 
 variable "proc_type" {
-  default = ["shared"]
+  default = "shared"
 }
 
 variable "sys_type" {
-  default = ["s922"]
+  default = "s922"
 }
 
 variable "powerinstanceid" {
   description = "Power Instance associated with the account"
+  default = "1d80f3d0-1854-4dd2-afcd-e42c0cda43f7"
 }
 
 variable "instancename" {
