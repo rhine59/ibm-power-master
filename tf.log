@@ -1,0 +1,1383 @@
+2020/02/23 13:07:17 [INFO] Terraform version: 0.12.20  
+2020/02/23 13:07:17 [INFO] Go runtime version: go1.12.13
+2020/02/23 13:07:17 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2020/02/23 13:07:17 [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2020/02/23 13:07:17 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/02/23 13:07:17 [DEBUG] checking for credentials in "/root/.terraform.d/plugins"
+2020/02/23 13:07:17 [INFO] CLI command args: []string{"plan"}
+2020/02/23 13:07:17 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/02/23 13:07:17 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/02/23 13:07:17 [DEBUG] New state was assigned lineage "5702654f-e966-27df-c69b-85f98125c35f"
+2020/02/23 13:07:17 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/02/23 13:07:17 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/02/23 13:07:17 [DEBUG] checking for provider in "."
+2020/02/23 13:07:17 [DEBUG] checking for provider in "/usr/local/bin"
+2020/02/23 13:07:17 [DEBUG] checking for provider in ".terraform/plugins/linux_amd64"
+2020/02/23 13:07:17 [DEBUG] checking for provider in "/root/.terraform.d/plugins"
+2020/02/23 13:07:17 [DEBUG] found provider "terraform-provider-ibm_v1.2.1"
+2020/02/23 13:07:17 [DEBUG] found valid plugin: "ibm", "1.2.1", "/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1"
+2020/02/23 13:07:17 [DEBUG] checking for provisioner in "."
+2020/02/23 13:07:17 [DEBUG] checking for provisioner in "/usr/local/bin"
+2020/02/23 13:07:17 [DEBUG] checking for provisioner in ".terraform/plugins/linux_amd64"
+2020/02/23 13:07:17 [DEBUG] checking for provisioner in "/root/.terraform.d/plugins"
+2020/02/23 13:07:17 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/02/23 13:07:17 [INFO] backend/local: starting Plan operation
+2020/02/23 13:07:17 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/02/23 13:07:17 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/02/23 13:07:17 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/02/23 13:07:17 [TRACE] backend/local: reading remote state for workspace "default"
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2020/02/23 13:07:17 [TRACE] statemgr.Filesystem: read nil snapshot
+2020/02/23 13:07:17 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/02/23 13:07:17 [TRACE] backend/local: building context for current working directory
+2020/02/23 13:07:17 [TRACE] terraform.NewContext: starting
+2020/02/23 13:07:17 [TRACE] terraform.NewContext: resolving provider version selections
+2020/02/23 13:07:18 [TRACE] terraform.NewContext: loading provider schemas
+2020/02/23 13:07:18 [TRACE] LoadSchemas: retrieving schema for provider type "ibm"
+2020-02-23T13:07:18.161Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:07:18.219Z [DEBUG] plugin: starting plugin: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 args=[/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1]
+2020-02-23T13:07:18.219Z [DEBUG] plugin: plugin started: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 pid=25437
+2020-02-23T13:07:18.219Z [DEBUG] plugin: waiting for RPC address: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1
+2020-02-23T13:07:18.277Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:18 IBM Cloud Provider version 1.2.1  
+2020-02-23T13:07:18.281Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:07:18.281Z
+2020-02-23T13:07:18.349Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: plugin address: address=/tmp/plugin473588039 network=unix timestamp=2020-02-23T13:07:18.349Z
+2020-02-23T13:07:18.349Z [DEBUG] plugin: using plugin: version=5
+2020/02/23 13:07:18 [TRACE] GRPCProvider: GetSchema
+2020/02/23 13:07:18 [TRACE] GRPCProvider: Close
+2020-02-23T13:07:18.523Z [DEBUG] plugin: plugin process exited: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 pid=25437
+2020-02-23T13:07:18.523Z [DEBUG] plugin: plugin exited
+2020/02/23 13:07:18 [TRACE] terraform.NewContext: complete
+2020/02/23 13:07:18 [TRACE] backend/local: finished building terraform.Context
+2020/02/23 13:07:18 [TRACE] backend/local: requesting interactive input, if necessary
+2020/02/23 13:07:18 [TRACE] Context.Input: Prompting for provider arguments
+2020/02/23 13:07:18 [TRACE] Context.Input: Provider provider.ibm implied by resource block at main.tf:1,1-28
+2020/02/23 13:07:18 [TRACE] Context.Input: Input for provider.ibm: map[string]cty.Value{}
+2020/02/23 13:07:18 [TRACE] backend/local: running validation operation
+2020/02/23 13:07:18 [INFO] terraform: building graph: GraphTypeValidate
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/02/23 13:07:18 [TRACE] ConfigTransformer: Starting for path: 
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/02/23 13:07:18 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "data.ibm_pi_images.power_images" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:25, Column:1, Byte:657}, End:hcl.Pos{Line:25, Column:36, Byte:692}}
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "ibm_pi_key.key" (*terraform.NodeValidatableResource) config from main.tf:1,1-28
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "ibm_pi_network.power_networks" (*terraform.NodeValidatableResource) config from main.tf:13,1-43
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "ibm_pi_instance.test-instance" (*terraform.NodeValidatableResource) config from main.tf:29,1-43
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "data.ibm_pi_key.dskey" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:7, Column:1, Byte:154}, End:hcl.Pos{Line:7, Column:26, Byte:179}}
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "data.ibm_pi_public_network.dsnetwork" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:20, Column:1, Byte:509}, End:hcl.Pos{Line:20, Column:41, Byte:549}}
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/02/23 13:07:18 [DEBUG] adding implicit provider configuration provider.ibm, implied first by data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: ibm_pi_key.key is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: data.ibm_pi_public_network.dsnetwork is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: data.ibm_pi_key.dskey is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: data.ibm_pi_images.power_images is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: ibm_pi_network.power_networks is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: ibm_pi_instance.test-instance is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "data.ibm_pi_key.dskey" (*terraform.NodeValidatableResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving data.ibm_pi_images.power_images
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "data.ibm_pi_images.power_images" (*terraform.NodeValidatableResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving ibm_pi_network.power_networks
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "ibm_pi_network.power_networks" (*terraform.NodeValidatableResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving ibm_pi_instance.test-instance
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "ibm_pi_instance.test-instance" (*terraform.NodeValidatableResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving ibm_pi_key.key
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "ibm_pi_key.key" (*terraform.NodeValidatableResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "data.ibm_pi_public_network.dsnetwork" (*terraform.NodeValidatableResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.ibm
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to data.ibm_pi_images.power_images
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to ibm_pi_network.power_networks
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to ibm_pi_instance.test-instance
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to ibm_pi_key.key
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "ibm_pi_network.power_networks" references: [var.networkname var.powerinstanceid]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "ibm_pi_instance.test-instance" references: [data.ibm_pi_key.dskey data.ibm_pi_images.power_images var.imagename data.ibm_pi_public_network.dsnetwork var.powerinstanceid var.instancename]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.ibmcloud_api_key" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.powerinstanceid" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.ibmcloud_region" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.imagename" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "ibm_pi_key.key" references: [var.powerinstanceid var.sshkeyname var.sshkey]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "data.ibm_pi_public_network.dsnetwork" references: [ibm_pi_network.power_networks var.powerinstanceid]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.volname" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.networkname" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "data.ibm_pi_key.dskey" references: [ibm_pi_key.key var.powerinstanceid var.sshkeyname]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "data.ibm_pi_images.power_images" references: [var.powerinstanceid]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.instancename" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.sshkeyname" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.sshkey" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "provider.ibm" references: []
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.ibmcloud_api_key - *terraform.NodeRootVariable
+    var.ibmcloud_region - *terraform.NodeRootVariable
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+    var.volname - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.ibmcloud_api_key - *terraform.NodeRootVariable
+    var.ibmcloud_region - *terraform.NodeRootVariable
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+    var.volname - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.ibmcloud_api_key - *terraform.NodeRootVariable
+    var.ibmcloud_region - *terraform.NodeRootVariable
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+    var.volname - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ibm (close) - *terraform.graphNodeCloseProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    ibm_pi_key.key - *terraform.NodeValidatableResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+  ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    data.ibm_pi_images.power_images - *terraform.NodeValidatableResource
+    data.ibm_pi_key.dskey - *terraform.NodeValidatableResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeValidatableResource
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+  ibm_pi_key.key - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  ibm_pi_network.power_networks - *terraform.NodeValidatableResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.networkname - *terraform.NodeRootVariable
+    var.powerinstanceid - *terraform.NodeRootVariable
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+    var.ibmcloud_api_key - *terraform.NodeRootVariable
+    var.ibmcloud_region - *terraform.NodeRootVariable
+    var.volname - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+    ibm_pi_instance.test-instance - *terraform.NodeValidatableResource
+  root - terraform.graphNodeRoot
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider.ibm (close) - *terraform.graphNodeCloseProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [DEBUG] Starting graph walk: walkValidate
+2020/02/23 13:07:18 [TRACE] dag/walk: updating graph
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.ibmcloud_region"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.networkname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "data.ibm_pi_key.dskey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "data.ibm_pi_images.power_images"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.sshkeyname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "provider.ibm (close)"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "ibm_pi_key.key"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.instancename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "ibm_pi_network.power_networks"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.sshkey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "ibm_pi_instance.test-instance"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.ibmcloud_api_key"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "root"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.imagename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.volname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "ibm_pi_instance.test-instance"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "ibm_pi_instance.test-instance"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_key.key" waiting on "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_instance.test-instance" waiting on "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.volname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_instance.test-instance" waiting on "var.imagename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.ibmcloud_region"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_key.key" waiting on "var.sshkeyname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_images.power_images" waiting on "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_key.key" waiting on "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "provider.ibm (close)"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_key.key" waiting on "var.sshkey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_public_network.dsnetwork" waiting on "ibm_pi_network.power_networks"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_key.dskey" waiting on "ibm_pi_key.key"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "var.ibmcloud_api_key"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_images.power_images" waiting on "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_network.power_networks" waiting on "var.networkname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_network.power_networks" waiting on "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_network.power_networks" waiting on "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_instance.test-instance" waiting on "var.instancename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_instance.test-instance" waiting on "data.ibm_pi_key.dskey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "ibm_pi_instance.test-instance" waiting on "data.ibm_pi_images.power_images"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "provider.ibm (close)", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "ibm_pi_instance.test-instance", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "data.ibm_pi_images.power_images", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "data.ibm_pi_key.dskey", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "ibm_pi_network.power_networks", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "ibm_pi_key.key", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "data.ibm_pi_public_network.dsnetwork", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.ibmcloud_region"
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_region": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_region": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.ibmcloud_region
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.ibmcloud_region
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_region": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.networkname"
+2020/02/23 13:07:18 [TRACE] vertex "var.networkname": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.networkname": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.networkname
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.networkname
+2020/02/23 13:07:18 [TRACE] vertex "var.networkname": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.sshkeyname"
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkeyname": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkeyname": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.sshkeyname
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.sshkeyname
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkeyname": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] vertex "var.powerinstanceid": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.powerinstanceid": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.powerinstanceid
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.powerinstanceid
+2020/02/23 13:07:18 [TRACE] vertex "var.powerinstanceid": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "provider.ibm"
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm": starting visit (*terraform.NodeApplyableProvider)
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: provider.ibm
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-02-23T13:07:18.539Z [INFO]  plugin: configuring client automatic mTLS
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.instancename"
+2020/02/23 13:07:18 [TRACE] vertex "var.instancename": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.instancename": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.instancename
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.instancename
+2020/02/23 13:07:18 [TRACE] vertex "var.instancename": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.sshkey"
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkey": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkey": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.sshkey
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.sshkey
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkey": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.ibmcloud_api_key"
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_api_key": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_api_key": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.ibmcloud_api_key
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.ibmcloud_api_key
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_api_key": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.imagename"
+2020/02/23 13:07:18 [TRACE] vertex "var.imagename": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.imagename": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.imagename
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.imagename
+2020/02/23 13:07:18 [TRACE] vertex "var.imagename": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.volname"
+2020/02/23 13:07:18 [TRACE] vertex "var.volname": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.volname": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: var.volname
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: var.volname
+2020/02/23 13:07:18 [TRACE] vertex "var.volname": visit complete
+2020-02-23T13:07:18.603Z [DEBUG] plugin: starting plugin: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 args=[/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1]
+2020-02-23T13:07:18.603Z [DEBUG] plugin: plugin started: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 pid=25444
+2020-02-23T13:07:18.603Z [DEBUG] plugin: waiting for RPC address: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1
+2020-02-23T13:07:18.658Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:18 IBM Cloud Provider version 1.2.1  
+2020-02-23T13:07:18.662Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:07:18.662Z
+2020-02-23T13:07:18.729Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: plugin address: network=unix address=/tmp/plugin983188710 timestamp=2020-02-23T13:07:18.729Z
+2020-02-23T13:07:18.729Z [DEBUG] plugin: using plugin: version=5
+2020/02/23 13:07:18 [TRACE] BuiltinEvalContext: Initialized "ibm" provider for provider.ibm
+2020/02/23 13:07:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/02/23 13:07:18 [TRACE] buildProviderConfig for provider.ibm: no configuration at all
+2020/02/23 13:07:18 [TRACE] GRPCProvider: GetSchema
+2020/02/23 13:07:18 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/02/23 13:07:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/02/23 13:07:18 [TRACE] <root>: eval: terraform.EvalNoop
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: provider.ibm
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "data.ibm_pi_images.power_images"
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_images.power_images": starting visit (*terraform.NodeValidatableResource)
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_images.power_images": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: data.ibm_pi_images.power_images
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/02/23 13:07:18 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "ibm_pi_key.key"
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_key.key": starting visit (*terraform.NodeValidatableResource)
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_key.key": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: ibm_pi_key.key
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/02/23 13:07:18 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "ibm_pi_network.power_networks"
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_network.power_networks": starting visit (*terraform.NodeValidatableResource)
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_network.power_networks": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: ibm_pi_network.power_networks
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/02/23 13:07:18 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: ibm_pi_key.key
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_key.key": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "data.ibm_pi_key.dskey"
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_key.dskey": starting visit (*terraform.NodeValidatableResource)
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_key.dskey": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/02/23 13:07:18 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: ibm_pi_network.power_networks
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_network.power_networks": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": starting visit (*terraform.NodeValidatableResource)
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/02/23 13:07:18 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: data.ibm_pi_images.power_images
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_images.power_images": visit complete
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": visit complete
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [TRACE] vertex "data.ibm_pi_key.dskey": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "ibm_pi_instance.test-instance"
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_instance.test-instance": starting visit (*terraform.NodeValidatableResource)
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_instance.test-instance": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: ibm_pi_instance.test-instance
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/02/23 13:07:18 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: ibm_pi_instance.test-instance
+2020/02/23 13:07:18 [TRACE] vertex "ibm_pi_instance.test-instance": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "provider.ibm (close)"
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm (close)": starting visit (*terraform.graphNodeCloseProvider)
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm (close)": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: provider.ibm (close)
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalCloseProvider
+2020/02/23 13:07:18 [TRACE] GRPCProvider: Close
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2020/02/23 13:07:18 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2020/02/23 13:07:18 [TRACE] vertex "meta.count-boundary (EachMode fixup)": evaluating
+2020/02/23 13:07:18 [TRACE] [walkValidate] Entering eval tree: meta.count-boundary (EachMode fixup)
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalCountFixZeroOneBoundaryGlobal
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: meta.count-boundary (EachMode fixup)
+2020/02/23 13:07:18 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2020-02-23T13:07:18.949Z [DEBUG] plugin: plugin process exited: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 pid=25444
+2020-02-23T13:07:18.949Z [DEBUG] plugin: plugin exited
+2020/02/23 13:07:18 [TRACE] [walkValidate] Exiting eval tree: provider.ibm (close)
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm (close)": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "root"
+2020/02/23 13:07:18 [TRACE] vertex "root": starting visit (terraform.graphNodeRoot)
+2020/02/23 13:07:18 [TRACE] vertex "root": visit complete
+2020/02/23 13:07:18 [INFO] backend/local: plan calling Refresh
+2020/02/23 13:07:18 [INFO] terraform: building graph: GraphTypeRefresh
+2020/02/23 13:07:18 [TRACE] No managed resources in state during refresh; skipping managed resource transformer
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/02/23 13:07:18 [TRACE] ConfigTransformer: Starting for path: 
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/02/23 13:07:18 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "data.ibm_pi_key.dskey" (*terraform.NodeRefreshableDataResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:7, Column:1, Byte:154}, End:hcl.Pos{Line:7, Column:26, Byte:179}}
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "data.ibm_pi_public_network.dsnetwork" (*terraform.NodeRefreshableDataResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:20, Column:1, Byte:509}, End:hcl.Pos{Line:20, Column:41, Byte:549}}
+2020/02/23 13:07:18 [TRACE] AttachResourceConfigTransformer: attaching to "data.ibm_pi_images.power_images" (*terraform.NodeRefreshableDataResource) config from hcl.Range{Filename:"main.tf", Start:hcl.Pos{Line:25, Column:1, Byte:657}, End:hcl.Pos{Line:25, Column:36, Byte:692}}
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/02/23 13:07:18 [DEBUG] adding implicit provider configuration provider.ibm, implied first by data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: data.ibm_pi_key.dskey is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: data.ibm_pi_public_network.dsnetwork is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: data.ibm_pi_images.power_images is provided by provider.ibm or inherited equivalent
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "data.ibm_pi_key.dskey" (*terraform.NodeRefreshableDataResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "data.ibm_pi_public_network.dsnetwork" (*terraform.NodeRefreshableDataResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] ProviderTransformer: exact match for provider.ibm serving data.ibm_pi_images.power_images
+2020/02/23 13:07:18 [DEBUG] ProviderTransformer: "data.ibm_pi_images.power_images" (*terraform.NodeRefreshableDataResource) needs provider.ibm
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/02/23 13:07:18 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to data.ibm_pi_key.dskey
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching resource schema to data.ibm_pi_images.power_images
+2020/02/23 13:07:18 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.ibm
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "data.ibm_pi_images.power_images" references: [var.powerinstanceid]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.instancename" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.volname" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.sshkeyname" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "data.ibm_pi_key.dskey" references: [var.powerinstanceid var.sshkeyname]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "data.ibm_pi_public_network.dsnetwork" references: [var.powerinstanceid]
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.ibmcloud_region" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.imagename" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.powerinstanceid" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.sshkey" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "provider.ibm" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.networkname" references: []
+2020/02/23 13:07:18 [DEBUG] ReferenceTransformer: "var.ibmcloud_api_key" references: []
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+    data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+    data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+  root - terraform.graphNodeRoot
+    provider.ibm (close) - *terraform.graphNodeCloseProvider
+    var.ibmcloud_api_key - *terraform.NodeRootVariable
+    var.ibmcloud_region - *terraform.NodeRootVariable
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.networkname - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.volname - *terraform.NodeRootVariable
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/02/23 13:07:18 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+    var.sshkeyname - *terraform.NodeRootVariable
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+    provider.ibm - *terraform.NodeApplyableProvider
+    var.powerinstanceid - *terraform.NodeRootVariable
+  provider.ibm - *terraform.NodeApplyableProvider
+  provider.ibm (close) - *terraform.graphNodeCloseProvider
+    data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResource
+    data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResource
+    data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResource
+  root - terraform.graphNodeRoot
+    provider.ibm (close) - *terraform.graphNodeCloseProvider
+    var.ibmcloud_api_key - *terraform.NodeRootVariable
+    var.ibmcloud_region - *terraform.NodeRootVariable
+    var.imagename - *terraform.NodeRootVariable
+    var.instancename - *terraform.NodeRootVariable
+    var.networkname - *terraform.NodeRootVariable
+    var.sshkey - *terraform.NodeRootVariable
+    var.volname - *terraform.NodeRootVariable
+  var.ibmcloud_api_key - *terraform.NodeRootVariable
+  var.ibmcloud_region - *terraform.NodeRootVariable
+  var.imagename - *terraform.NodeRootVariable
+  var.instancename - *terraform.NodeRootVariable
+  var.networkname - *terraform.NodeRootVariable
+  var.powerinstanceid - *terraform.NodeRootVariable
+  var.sshkey - *terraform.NodeRootVariable
+  var.sshkeyname - *terraform.NodeRootVariable
+  var.volname - *terraform.NodeRootVariable
+  ------
+2020/02/23 13:07:18 [DEBUG] Starting graph walk: walkRefresh
+2020/02/23 13:07:18 [TRACE] dag/walk: updating graph
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.ibmcloud_api_key"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "data.ibm_pi_images.power_images"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.instancename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.sshkeyname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.networkname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.volname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.imagename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "provider.ibm (close)"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "root"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "data.ibm_pi_key.dskey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.sshkey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added new vertex: "var.ibmcloud_region"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.volname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.imagename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "data.ibm_pi_images.power_images"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_key.dskey" waiting on "var.sshkeyname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.instancename"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.ibmcloud_region"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_public_network.dsnetwork" waiting on "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "provider.ibm (close)"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_key.dskey" waiting on "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.networkname"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.ibmcloud_api_key"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_key.dskey" waiting on "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_public_network.dsnetwork" waiting on "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "provider.ibm (close)" waiting on "data.ibm_pi_key.dskey"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_images.power_images" waiting on "provider.ibm"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "data.ibm_pi_images.power_images" waiting on "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] dag/walk: added edge: "root" waiting on "var.sshkey"
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "provider.ibm (close)", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "data.ibm_pi_key.dskey", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "data.ibm_pi_public_network.dsnetwork", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: dependencies changed for "data.ibm_pi_images.power_images", sending new deps
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.ibmcloud_region"
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_region": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_region": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.ibmcloud_region
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.ibmcloud_region
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_region": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.sshkey"
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkey": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkey": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.sshkey
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.sshkey
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkey": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.instancename"
+2020/02/23 13:07:18 [TRACE] vertex "var.instancename": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.instancename": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.instancename
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.instancename
+2020/02/23 13:07:18 [TRACE] vertex "var.instancename": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.ibmcloud_api_key"
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_api_key": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_api_key": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.ibmcloud_api_key
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.ibmcloud_api_key
+2020/02/23 13:07:18 [TRACE] vertex "var.ibmcloud_api_key": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.powerinstanceid"
+2020/02/23 13:07:18 [TRACE] vertex "var.powerinstanceid": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.powerinstanceid": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.powerinstanceid
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.powerinstanceid
+2020/02/23 13:07:18 [TRACE] vertex "var.powerinstanceid": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.volname"
+2020/02/23 13:07:18 [TRACE] vertex "var.volname": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.volname": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.volname
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.volname
+2020/02/23 13:07:18 [TRACE] vertex "var.volname": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.sshkeyname"
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkeyname": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkeyname": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.sshkeyname
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.sshkeyname
+2020/02/23 13:07:18 [TRACE] vertex "var.sshkeyname": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "provider.ibm"
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm": starting visit (*terraform.NodeApplyableProvider)
+2020/02/23 13:07:18 [TRACE] vertex "provider.ibm": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: provider.ibm
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020-02-23T13:07:18.953Z [INFO]  plugin: configuring client automatic mTLS
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.networkname"
+2020/02/23 13:07:18 [TRACE] vertex "var.networkname": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.networkname": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.networkname
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.networkname
+2020/02/23 13:07:18 [TRACE] vertex "var.networkname": visit complete
+2020/02/23 13:07:18 [TRACE] dag/walk: visiting "var.imagename"
+2020/02/23 13:07:18 [TRACE] vertex "var.imagename": starting visit (*terraform.NodeRootVariable)
+2020/02/23 13:07:18 [TRACE] vertex "var.imagename": evaluating
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Entering eval tree: var.imagename
+2020/02/23 13:07:18 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:18 [TRACE] [walkRefresh] Exiting eval tree: var.imagename
+2020/02/23 13:07:18 [TRACE] vertex "var.imagename": visit complete
+2020-02-23T13:07:19.015Z [DEBUG] plugin: starting plugin: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 args=[/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1]
+2020-02-23T13:07:19.016Z [DEBUG] plugin: plugin started: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 pid=25452
+2020-02-23T13:07:19.016Z [DEBUG] plugin: waiting for RPC address: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1
+2020-02-23T13:07:19.075Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:19 IBM Cloud Provider version 1.2.1  
+2020-02-23T13:07:19.079Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:07:19.079Z
+2020-02-23T13:07:19.148Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: plugin address: network=unix address=/tmp/plugin424006106 timestamp=2020-02-23T13:07:19.148Z
+2020-02-23T13:07:19.149Z [DEBUG] plugin: using plugin: version=5
+2020/02/23 13:07:19 [TRACE] BuiltinEvalContext: Initialized "ibm" provider for provider.ibm
+2020/02/23 13:07:19 [TRACE] <root>: eval: terraform.EvalNoop
+2020/02/23 13:07:19 [TRACE] <root>: eval: terraform.EvalNoop
+2020/02/23 13:07:19 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/02/23 13:07:19 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:19 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:19 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/02/23 13:07:19 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:19 [TRACE] <root>: eval: *terraform.EvalConfigProvider
+2020/02/23 13:07:19 [TRACE] buildProviderConfig for provider.ibm: no configuration at all
+2020/02/23 13:07:19 [TRACE] GRPCProvider: GetSchema
+2020/02/23 13:07:19 [TRACE] GRPCProvider: Configure
+2020-02-23T13:07:19.335Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:19 Configuring SoftLayer Session with API key
+2020-02-23T13:07:19.335Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:19 Configuring IBM Cloud Session with API key
+2020-02-23T13:07:23.258Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:23 the apiendpoint url for power is us-south.power-iaas.cloud.ibm.com
+2020/02/23 13:07:23 [TRACE] [walkRefresh] Exiting eval tree: provider.ibm
+2020/02/23 13:07:23 [TRACE] vertex "provider.ibm": visit complete
+2020/02/23 13:07:23 [TRACE] dag/walk: visiting "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": starting visit (*terraform.NodeRefreshableDataResource)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": expanding dynamic subgraph
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.ibm_pi_public_network.dsnetwork - *terraform.NodeRefreshableDataResourceInstance
+  ------
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/02/23 13:07:23 [DEBUG] Resource state not found for node "data.ibm_pi_public_network.dsnetwork", instance data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/02/23 13:07:23 [DEBUG] ReferenceTransformer: "data.ibm_pi_public_network.dsnetwork" references: []
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": entering dynamic subgraph
+2020/02/23 13:07:23 [TRACE] dag/walk: updating graph
+2020/02/23 13:07:23 [TRACE] dag/walk: added new vertex: "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:23 [TRACE] dag/walk: visiting "data.ibm_pi_public_network.dsnetwork"
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": evaluating
+2020/02/23 13:07:23 [TRACE] [walkRefresh] Entering eval tree: data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/02/23 13:07:23 [TRACE] EvalWriteState: removing state object for data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalReadData
+2020/02/23 13:07:23 [TRACE] EvalReadData: working on data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] EvalReadData: data.ibm_pi_public_network.dsnetwork configuration is fully known, but we're forcing a read plan to be created
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalIf
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/02/23 13:07:23 [TRACE] EvalWriteDiff: recorded Read change for data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/02/23 13:07:23 [TRACE] EvalWriteState: writing current state object for data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_pi_public_network.dsnetwork
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": visit complete
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": dynamic subgraph completed successfully
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_public_network.dsnetwork": visit complete
+2020/02/23 13:07:23 [TRACE] dag/walk: visiting "data.ibm_pi_key.dskey"
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": starting visit (*terraform.NodeRefreshableDataResource)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": expanding dynamic subgraph
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.ibm_pi_key.dskey - *terraform.NodeRefreshableDataResourceInstance
+  ------
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/02/23 13:07:23 [DEBUG] Resource state not found for node "data.ibm_pi_key.dskey", instance data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/02/23 13:07:23 [DEBUG] ReferenceTransformer: "data.ibm_pi_key.dskey" references: []
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": entering dynamic subgraph
+2020/02/23 13:07:23 [TRACE] dag/walk: updating graph
+2020/02/23 13:07:23 [TRACE] dag/walk: added new vertex: "data.ibm_pi_key.dskey"
+2020/02/23 13:07:23 [TRACE] dag/walk: visiting "data.ibm_pi_key.dskey"
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": evaluating
+2020/02/23 13:07:23 [TRACE] [walkRefresh] Entering eval tree: data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/02/23 13:07:23 [TRACE] EvalWriteState: removing state object for data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalReadData
+2020/02/23 13:07:23 [TRACE] EvalReadData: working on data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] EvalReadData: data.ibm_pi_key.dskey configuration is fully known, but we're forcing a read plan to be created
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalIf
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteDiff
+2020/02/23 13:07:23 [TRACE] EvalWriteDiff: recorded Read change for data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/02/23 13:07:23 [TRACE] EvalWriteState: writing current state object for data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_pi_key.dskey
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": visit complete
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": dynamic subgraph completed successfully
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_key.dskey": visit complete
+2020/02/23 13:07:23 [TRACE] dag/walk: visiting "data.ibm_pi_images.power_images"
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_images.power_images": starting visit (*terraform.NodeRefreshableDataResource)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_images.power_images": expanding dynamic subgraph
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  data.ibm_pi_images.power_images - *terraform.NodeRefreshableDataResourceInstance
+  ------
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.OrphanResourceCountTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.OrphanResourceCountTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/02/23 13:07:23 [DEBUG] Resource state not found for node "data.ibm_pi_images.power_images", instance data.ibm_pi_images.power_images
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/02/23 13:07:23 [DEBUG] ReferenceTransformer: "data.ibm_pi_images.power_images" references: []
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/02/23 13:07:23 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_images.power_images": entering dynamic subgraph
+2020/02/23 13:07:23 [TRACE] dag/walk: updating graph
+2020/02/23 13:07:23 [TRACE] dag/walk: added new vertex: "data.ibm_pi_images.power_images"
+2020/02/23 13:07:23 [TRACE] dag/walk: visiting "data.ibm_pi_images.power_images"
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_images.power_images": starting visit (*terraform.NodeRefreshableDataResourceInstance)
+2020/02/23 13:07:23 [TRACE] vertex "data.ibm_pi_images.power_images": evaluating
+2020/02/23 13:07:23 [TRACE] [walkRefresh] Entering eval tree: data.ibm_pi_images.power_images
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalWriteState
+2020/02/23 13:07:23 [TRACE] EvalWriteState: removing state object for data.ibm_pi_images.power_images
+2020/02/23 13:07:23 [TRACE] <root>: eval: *terraform.EvalReadData
+2020/02/23 13:07:23 [TRACE] EvalReadData: working on data.ibm_pi_images.power_images
+2020/02/23 13:07:23 [TRACE] Re-validating config for data.ibm_pi_images.power_images
+2020/02/23 13:07:23 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/02/23 13:07:23 [TRACE] EvalReadData: data.ibm_pi_images.power_images configuration is complete, so reading from provider
+2020/02/23 13:07:23 [TRACE] GRPCProvider: ReadDataSource
+2020-02-23T13:07:23.263Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:23 Calling the New Auth Method in the IBMPower Session Code
+2020-02-23T13:07:23.263Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:23 Calling the crn constructor that is to be passed back to the caller  fd6118dd8088f67726c522e96131c343
+2020-02-23T13:07:23.263Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:23 the region is us-south
+2020-02-23T13:07:23.263Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:23 the crndata is ... crn:v1:bluemix:public:power-iaas:us-south:a/fd6118dd8088f67726c522e96131c343:1d80f3d0-1854-4dd2-afcd-e42c0cda43f7:: 
+2020/02/23 13:07:23 [TRACE] dag/walk: vertex "root" is waiting for "provider.ibm (close)"
+2020-02-23T13:07:24.239Z [DEBUG] plugin.terraform-provider-ibm_v1.2.1: 2020/02/23 13:07:24 Failed to perform the operation... [GET /pcloud/v1/cloud-instances/{cloud_instance_id}/images][500] pcloudCloudinstancesImagesGetallInternalServerError  &{Code:0 Description:an error has occurred; please try again: unable to get admin image instance: unable to get new image instance: unable to get provider client: provider client does not exist or does not have any credentials registered Error:internal server error Message:}
+2020/02/23 13:07:24 [ERROR] <root>: eval: *terraform.EvalReadData, err: {"description":"an error has occurred; please try again: unable to get admin image instance: unable to get new image instance: unable to get provider client: provider client does not exist or does not have any credentials registered","error":"internal server error"}
+2020/02/23 13:07:24 [ERROR] <root>: eval: *terraform.EvalSequence, err: {"description":"an error has occurred; please try again: unable to get admin image instance: unable to get new image instance: unable to get provider client: provider client does not exist or does not have any credentials registered","error":"internal server error"}
+2020/02/23 13:07:24 [TRACE] [walkRefresh] Exiting eval tree: data.ibm_pi_images.power_images
+2020/02/23 13:07:24 [TRACE] vertex "data.ibm_pi_images.power_images": visit complete
+2020/02/23 13:07:24 [TRACE] vertex "data.ibm_pi_images.power_images": dynamic subgraph encountered errors
+2020/02/23 13:07:24 [TRACE] vertex "data.ibm_pi_images.power_images": visit complete
+2020/02/23 13:07:24 [TRACE] dag/walk: upstream of "provider.ibm (close)" errored, so skipping
+2020/02/23 13:07:24 [TRACE] dag/walk: upstream of "root" errored, so skipping
+2020/02/23 13:07:24 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+2020/02/23 13:07:24 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
+2020-02-23T13:07:24.254Z [DEBUG] plugin: plugin process exited: path=/root/.terraform.d/plugins/terraform-provider-ibm_v1.2.1 pid=25452
+2020-02-23T13:07:24.254Z [DEBUG] plugin: plugin exited
+2020/02/23 13:44:22 [INFO] Terraform version: 0.12.20  
+2020/02/23 13:44:22 [INFO] Go runtime version: go1.12.13
+2020/02/23 13:44:22 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2020/02/23 13:44:22 [INFO] CLI command args: []string{"plan"}
+2020/02/23 13:44:22 [INFO] backend/local: starting Plan operation
+2020-02-23T13:44:22.995Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:44:23.113Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:44:23.112Z
+2020/02/23 13:44:23 [INFO] terraform: building graph: GraphTypeValidate
+2020-02-23T13:44:23.366Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:44:23.488Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:44:23.488Z
+2020/02/23 13:44:23 [INFO] backend/local: plan calling Refresh
+2020/02/23 13:44:23 [INFO] terraform: building graph: GraphTypeRefresh
+2020-02-23T13:44:23.767Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:44:23.893Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:44:23.893Z
+2020/02/23 13:44:29 [INFO] backend/local: plan calling Plan
+2020/02/23 13:44:29 [INFO] terraform: building graph: GraphTypePlan
+2020-02-23T13:44:29.494Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:44:29.618Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:44:29.618Z
+2020/02/23 13:44:37 [WARN] Provider "registry.terraform.io/-/ibm" produced an invalid plan for ibm_pi_instance.test-instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .pi_replicants: planned value cty.NumberIntVal(1) does not match config value cty.NullVal(cty.Number)
+      - .pi_replication_policy: planned value cty.StringVal("none") does not match config value cty.NullVal(cty.String)
+      - .pi_volume_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetValEmpty(cty.String)
+      - .pi_network_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .pi_replication_scheme: planned value cty.StringVal("suffix") does not match config value cty.NullVal(cty.String)
+2020/02/23 13:44:37 [INFO] backend/local: plan operation completed
+2020/02/23 13:45:34 [INFO] Terraform version: 0.12.20  
+2020/02/23 13:45:34 [INFO] Go runtime version: go1.12.13
+2020/02/23 13:45:34 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2020/02/23 13:45:34 [INFO] CLI command args: []string{"plan"}
+2020/02/23 13:45:34 [INFO] backend/local: starting Plan operation
+2020-02-23T13:45:35.124Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:45:35.242Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:45:35.242Z
+2020/02/23 13:45:35 [INFO] terraform: building graph: GraphTypeValidate
+2020-02-23T13:45:35.504Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:45:35.627Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:45:35.627Z
+2020/02/23 13:45:35 [INFO] backend/local: plan calling Refresh
+2020/02/23 13:45:35 [INFO] terraform: building graph: GraphTypeRefresh
+2020-02-23T13:45:35.909Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:45:36.035Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:45:36.035Z
+2020/02/23 13:45:39 [ERROR] <root>: eval: *terraform.EvalReadData, err: {"code":500,"message":"unable to find cloud instance id for service instance abd259f0-9990-11e8-acc8-b9f54a8f1661: cloud-instance (name) abd259f0-9990-11e8-acc8-b9f54a8f1661 not found"}
+2020/02/23 13:45:39 [ERROR] <root>: eval: *terraform.EvalSequence, err: {"code":500,"message":"unable to find cloud instance id for service instance abd259f0-9990-11e8-acc8-b9f54a8f1661: cloud-instance (name) abd259f0-9990-11e8-acc8-b9f54a8f1661 not found"}
+2020/02/23 13:51:18 [INFO] Terraform version: 0.12.20  
+2020/02/23 13:51:18 [INFO] Go runtime version: go1.12.13
+2020/02/23 13:51:18 [INFO] CLI args: []string{"/usr/local/bin/terraform", "plan"}
+2020/02/23 13:51:19 [INFO] CLI command args: []string{"plan"}
+2020/02/23 13:51:19 [INFO] backend/local: starting Plan operation
+2020-02-23T13:51:19.226Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:51:19.342Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:51:19.342Z
+2020/02/23 13:51:19 [INFO] terraform: building graph: GraphTypeValidate
+2020-02-23T13:51:19.599Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:51:19.717Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:51:19.717Z
+2020/02/23 13:51:19 [INFO] backend/local: plan calling Refresh
+2020/02/23 13:51:19 [INFO] terraform: building graph: GraphTypeRefresh
+2020-02-23T13:51:19.988Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:51:20.116Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:51:20.116Z
+2020/02/23 13:51:27 [INFO] backend/local: plan calling Plan
+2020/02/23 13:51:27 [INFO] terraform: building graph: GraphTypePlan
+2020-02-23T13:51:27.469Z [INFO]  plugin: configuring client automatic mTLS
+2020-02-23T13:51:27.592Z [INFO]  plugin.terraform-provider-ibm_v1.2.1: configuring server automatic mTLS: timestamp=2020-02-23T13:51:27.591Z
+2020/02/23 13:51:33 [WARN] Provider "registry.terraform.io/-/ibm" produced an invalid plan for ibm_pi_instance.test-instance, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .pi_network_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetVal([]cty.Value{cty.UnknownVal(cty.String)})
+      - .pi_replication_scheme: planned value cty.StringVal("suffix") does not match config value cty.NullVal(cty.String)
+      - .pi_replicants: planned value cty.NumberIntVal(1) does not match config value cty.NullVal(cty.Number)
+      - .pi_volume_ids: planned value cty.UnknownVal(cty.Set(cty.String)) does not match config value cty.SetValEmpty(cty.String)
+      - .pi_replication_policy: planned value cty.StringVal("none") does not match config value cty.NullVal(cty.String)
+2020/02/23 13:51:33 [INFO] backend/local: plan operation completed
