@@ -4,8 +4,8 @@ variable "ibmcloud_api_key" {
 }
 
 variable "ibmcloud_region" {
-  description = "Germany"
-  default = "eu-de"
+  description = "IBMCloud Region"
+  default = "us-south"
 }
 
 variable "processors" {
@@ -33,7 +33,7 @@ variable "sys_type" {
 
 variable "powerinstanceid" {
   description = "Power Instance associated with the account"
-  default = "1d80f3d0-1854-4dd2-afcd-e42c0cda43f7"
+  default = "2adcae61-db54-45c8-a816-a8b8c66679e8"
 }
 
 variable "instancename" {
