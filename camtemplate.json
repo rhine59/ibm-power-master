@@ -24,7 +24,7 @@
     },
     "metadata": {
       "providerDisplayName": "IBMCloud",
-      "longDescription": "This template deploys OS400 or AIX VMs into the IBM Power Cloud.",
+      "longDescription": "This template deploys OS400 or AIX VMs into the IBM Power Cloud. You need to know the PowerCloud INstance ID from the `ibmcloud resource service-instances --long` command, and you need to preload the Power Images using the `ibmcloud pi image-list-catalog` and the `ibmcloud pi image-create <ID>` commands ",
       "bullets": [{
     "title": "Clouds",
     "description": " IBMCloud<br>"},
