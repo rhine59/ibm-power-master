@@ -10,3 +10,4 @@ memory = 2
 processors = 0.25
 sys_type = "s922"
 proc_type = "shared"
+nuts
