@@ -29,7 +29,7 @@ data "ibm_pi_images" "power_images" {
 resource "ibm_pi_volume" "volume"{
   pi_volume_size       = 20
   pi_volume_name       = var.volname
-  pi_volume_type       = "ssd"
+  pi_volume_type       = "standard"
   pi_volume_shareable  = true
   pi_cloud_instance_id = var.powerinstanceid
 }
