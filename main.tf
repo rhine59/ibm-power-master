@@ -38,7 +38,3 @@ resource "ibm_pi_instance" "power-instance" {
     pi_sys_type           = var.sys_type
     pi_volume_ids         = []
 }
-
-output "sshcommand" {
-  value = "ssh root@ibm_pi_instance.power-instance.addresses.externalip"
-}
